@@ -1,0 +1,54 @@
+<?php
+$viewdefs['Cases'] = array(
+    'EditView' => array(
+        'templateMeta' => array(
+            'maxColumns' => '2',
+            'widths' => array(
+                array('label' => '10', 'field' => '30'),
+                array('label' => '10', 'field' => '30'),
+            ),
+            'includes' => array(
+                array('file' => 'include/javascript/bindWithDelay.js'),
+                array('file' => 'modules/AOK_KnowledgeBase/AOK_KnowledgeBase_SuggestionBox.js'),
+                array('file' => 'include/javascript/qtip/jquery.qtip.min.js'),
+                array('file' => 'custom/modules/Cases/js/dependentDropdowns.js'), // Add this line
+            ),
+            'useTabs' => false,
+            'tabDefs' => array(
+                'LBL_CASE_INFORMATION' => array(
+                    'newTab' => false,
+                    'panelDefault' => 'expanded',
+                ),
+            ),
+            'form' => array(
+                'enctype' => 'multipart/form-data',
+            ),
+            'syncDetailEditViews' => true,
+        ),
+        'panels' => array(
+            'lbl_case_information' => array(
+                array(
+                    array('name' => 'case_number', 'type' => 'readonly'),
+                    'priority',
+                ),
+                array(
+                    array('name' => 'name', 'displayParams' => array()),
+                    array('name' => 'suggestion_box', 'label' => 'LBL_SUGGESTION_BOX'),
+                ),
+                array(
+                    '',
+                    'account_name',
+                ),
+                array(
+                    'country_c', // Add country field
+                    'state_c',   // Add state field
+                ),
+                array(
+                    'city_c', // Add city field
+                    'description',
+                ),
+            ),
+        ),
+    ),
+);
+?>

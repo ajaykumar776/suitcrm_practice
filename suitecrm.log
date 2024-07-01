@@ -1,0 +1,5 @@
+Monday 01 July 2024 08:38:11 PM [24507][1][FATAL] Mysqli_query failed.
+Monday 01 July 2024 08:38:11 PM [24507][1][FATAL] Error inserting into table: cases: Query Failed: INSERT INTO cases (id,name,date_entered,date_modified,modified_user_id,created_by,description,deleted,assigned_user_id,priority,account_id,state,country_c,state_c,city_c)
+					VALUES ('35a13d87-fe98-8f73-4c1f-6682f7ee5ae8','Rudyard Holt','2024-07-01 18:38:10','2024-07-01 18:38:10','1','1','<p>Impedit, alias optio.</p>',0,'','P2','18504b24-a4c6-c415-1f8e-667d03738deb','Open','in','in_karnataka','in_karnataka_bangalore'): MySQL error 1054: Unknown column 'country_c' in 'field list'
+Monday 01 July 2024 08:38:11 PM [24507][1][FATAL] Exception handling in /opt/lampp/htdocs/SuiteCRM-7.14.4/include/MVC/Controller/SugarController.php:397
+Monday 01 July 2024 08:38:11 PM [24507][1][FATAL] Exception in Controller: Database failure. Please refer to suitecrm.log for details.
